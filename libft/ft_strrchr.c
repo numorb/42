@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: bnunez-m <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/16 14:59:13 by bnunez-m          #+#    #+#             */
-/*   Updated: 2023/01/16 15:00:29 by bnunez-m         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
 #include <string.h>
 #include <stdio.h>
@@ -29,8 +17,8 @@ char	*ft_strrchr(const char *s, int c)
 		return (last);
 	if ((char)c == '\0')
 		return ((char *)s);
-	if (c < -128 || c > 127)
-		return (NULL);
+	if(c < -128 || c > 127)
+        return (NULL);
 	return (NULL);
 }
 

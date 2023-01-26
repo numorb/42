@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: bnunez-m <bnunez-m@student.42.fr>          +#+  +:+       +#+         #
+#    By: bnunez-m <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/14 20:27:40 by bnunez-m          #+#    #+#              #
-#    Updated: 2023/01/16 17:44:50 by bnunez-m         ###   ########.fr        #
+#    Updated: 2022/12/14 20:37:44 by bnunez-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,9 +25,6 @@ OBJS			= $(SRCS:.c=.o)
 CC				= gcc
 RM				= rm -f
 CFLAGS			= -Wall -Wextra -Werror -I.
-
-.c.o:
-			${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 NAME			= libft.a
 

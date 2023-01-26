@@ -1,45 +1,31 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: bnunez-m <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/16 14:49:20 by bnunez-m          #+#    #+#             */
-/*   Updated: 2023/01/16 14:53:10 by bnunez-m         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
 #include <string.h>
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void    *ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char		*d;
-	const unsigned char	*s;
+    unsigned char *d = (unsigned char*)dest;
+    const unsigned char *s = (unsigned char*)src;
 
-	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
-	if (src == dest)
-		return (dest);
-	if (d > s && d < s + n)
-	{
-		d += n - 1;
-		s += n - 1;
-		while (n--)
-			*d-- = *s--;
-	}
-	else if (s > d)
-	{
-		while (n--)
-			*d++ = *s++;
-	}
-	else
-	{
-		while (n--)
-			*d++ = *s++;
-	}
-	return (dest);
+    if (src == dest)
+        return (dest);
+    if (d > s && d < s + n)
+    {
+        d += n - 1;
+        s += n - 1;
+        while (n--)
+            *d-- = *s--;
+    }
+    else if (s > d)
+    {
+        while (n--)
+            *d++ = *s++;
+    }
+    else
+    {
+        while (n--)
+            *d++ = *s++;
+    }
+    return (dest);
 }
 
 /*int main(void)
